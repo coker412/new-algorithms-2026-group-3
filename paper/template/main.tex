@@ -1,0 +1,106 @@
+% 第三组统一排版模板：复制到对应报告目录后填写正文。
+% 编译：latexmk -g -xelatex -outdir=_build main.tex
+\documentclass[UTF8,a4paper,zihao=-4,fontset=fandol]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx,booktabs}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont{lmroman10-regular.otf}[
+  BoldFont=lmroman10-bold.otf,
+  ItalicFont=lmroman10-italic.otf,
+  BoldItalicFont=lmroman10-bolditalic.otf
+]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}
+\linespread{1.3}
+\setlength{\parindent}{2\ccwd}
+\setlength{\parskip}{0pt}
+\setcounter{secnumdepth}{2}
+\ctexset{
+  section = {
+    format = \raggedright\heiti\zihao{4},
+    number = \arabic{section},
+    beforeskip = 12pt,
+    afterskip = 6pt
+  },
+  subsection = {
+    format = \raggedright\heiti\zihao{-4},
+    number = \thesection.\arabic{subsection},
+    beforeskip = 6pt,
+    afterskip = 3pt
+  }
+}
+\pagestyle{plain}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\DeclareCaptionFont{groupcaption}{\zihao{5}}
+\captionsetup{font=groupcaption,labelsep=quad}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{remark}[theorem]{注}
+\newtheorem{example}[theorem]{例}
+\newtheorem{conjecture}[theorem]{猜想}
+\newtheorem{problem}[theorem]{问题}
+\renewcommand{\proofname}{证明}
+
+\title{\heiti\zihao{2}候选题讨论模板}
+\author{\zihao{-4}第三组\\\zihao{-4}作者：待填写}
+\date{}
+
+\begin{document}
+\maketitle
+
+本文件提供组内候选题讨论的排版与填写结构。
+具体题目和试解结果应在仓库转为私有后填写。
+
+\section{题目}
+\label{sec:problem}
+
+填写题目名称和完整题面，说明要求证明、构造、计算或比较什么。
+写出基础目标及完成标准，使其他成员能够据此独立开始解题。
+
+\section{条件}
+\label{sec:conditions}
+
+定义研究对象和符号，列明假设、参数范围、边界情况、输入输出，
+以及数据、计算资源和方法限制。说明题目与课程内容的联系。
+
+\section{问题现状}
+\label{sec:background}
+
+说明背景与研究价值、已有结论、方法或基线，以及本题具体要推进的问题。
+引用真实来源并注明必要的定理编号或页码；仍待查证的判断应明确标注。
+
+\section{初步用 AI 尝试的解答结果}
+\label{sec:ai}
+
+\subsection{尝试过程与结果}
+
+记录工具、可知模型版本、日期、实际输入的题面及关键提示，
+概述主要解题思路和得到的解答或阶段性结果。
+必要推导、代码和实验记录应有可访问的位置。
+
+\subsection{人工核查与剩余问题}
+
+写明核查人、检查步骤及结果，指出发现的错误和仍未解决的环节。
+根据试解情况，说明题目的条件、目标或难度是否需要调整。
+
+\section{后续进阶问题}
+\label{sec:extensions}
+
+至少提出一个完整、明确的进阶问题，说明相对基础题改变的条件或目标，
+给出研究价值、预期难点、完成标准及可行性依据。
+注明它属于本次课程的进阶目标，还是长期探索方向。
+
+% 有真实引用后，在正文使用 \cite{引用键}，并启用以下两行。
+% \bibliographystyle{unsrt}
+% \bibliography{references}
+% 必要附录放在参考文献后，用 \appendix 和 \section 开始。
+\end{document}

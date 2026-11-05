@@ -1,0 +1,39 @@
+# 本地系统与编辑器文件
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*~
+*.swp
+
+# 私密配置
+.env
+.env.*
+!.env.example
+
+# Python 环境与缓存
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# 报告构建输出；提交 PDF 时另附固定版本附件
+_build/
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# 大型本地数据；必要小型输入和结果应提交或提供下载说明
+data/local/
+
+# 课程原始材料保留本地，公开仓库只提供规则摘要与空模板
+/docs/course-rules.pdf
+
+# 仅共享统一模板的 PDF 预览，其他构建产物继续忽略
+!/paper/template/_build/
+/paper/template/_build/*
+!/paper/template/_build/main.pdf
